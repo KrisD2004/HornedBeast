@@ -1,7 +1,7 @@
 import './App.css';
 import HornedBeast from './Horned';
 
-//content of the page
+// fucntion to put the content of the page
 function Main() {
     return (
       <div>

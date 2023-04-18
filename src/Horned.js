@@ -1,5 +1,5 @@
 import './App.css';
-//html object and this is how pictures will be put on the page
+//object and this is how pictures will be rendered on the page
 function HornedBeast(props) {
     return (
         <div>
