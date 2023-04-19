@@ -1,12 +1,35 @@
 import './App.css';
+import { useState } from 'react';
+import { Card, Button } from 'react-bootstrap';
+
 //object and this is how pictures will be rendered on the page
 function HornedBeast(props) {
+    //setting times clicked
+    // UseState is a built in function that keeps up and update the state
+    const [timesClick, timesClicked] = useState(0)
+
+    function state(){
+        timesClicked(timesClick + 1);
+       
+    }
+    
     return (
-        <div>
+        // added card and button bootstrap features
+        <Card style= {{width: '15rem'}}>
             <h2>{props.title}</h2>
             <p>{props.description}</p>
-            <img src={props.image}></img>
-        </div>
+            <img src={props.image} ></img>
+            {/* <p>{timesClick}</p> */}
+
+            <Button onClick={state}>Like</Button>
+            <p>&#9829;{timesClick}</p>
+            {/* added heart feature */}
+            
+
+        </Card>
+        
+
+        
     )
 }
 
