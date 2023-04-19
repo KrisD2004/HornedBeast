@@ -18,7 +18,7 @@ function HornedBeast(props) {
         <Card style= {{width: '15rem'}}>
             <h2>{props.title}</h2>
             <p>{props.description}</p>
-            <img src={props.image} ></img>
+            <img src={props.image} class = 'mw-100' height={'200px'}></img>
             {/* <p>{timesClick}</p> */}
 
             <Button onClick={state}>Like</Button>

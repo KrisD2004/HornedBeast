@@ -6,8 +6,9 @@ import HornedBeastArray from './data.json';
 // fucntion to put the content of the page
 function Main() {
     return (
-      <div>
-        <main>This is Horned Beasts</main>
+        
+      <div class = "d-flex justify-content-center flex-wrap">
+        {/* <main>This is Horned Beasts</main> */}
         <HornedBeast title = {HornedBeastArray[0].title}  description = {HornedBeastArray[0].description} image = {HornedBeastArray[0].image_url} timesClick= {0} ></HornedBeast>
         <HornedBeast title = {HornedBeastArray[1].title}  description = {HornedBeastArray[1].description} image = {HornedBeastArray[1].image_url} timesClick= {0}></HornedBeast>
         <HornedBeast title = {HornedBeastArray[2].title}  description = {HornedBeastArray[2].description} image = {HornedBeastArray[2].image_url} timesClick= {0}></HornedBeast>
