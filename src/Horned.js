@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button} from 'react-bootstrap';
 
 //object and this is how pictures will be rendered on the page
 function HornedBeast(props) {
@@ -24,6 +24,7 @@ function HornedBeast(props) {
             <Button onClick={state}>Like</Button>
             <p>&#9829;{timesClick}</p>
             {/* added heart feature */}
+            
             
 
         </Card>
