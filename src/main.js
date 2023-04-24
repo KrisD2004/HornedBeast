@@ -1,15 +1,35 @@
 import './App.css';
 import HornedBeast from './Horned';
 import HornedBeastArray from './data.json';
-
+import { Modal } from 'react-bootstrap';
 
 // fucntion to put the content of the page
-function Main() {
+//shortend way to display images
+function Main(props) {
     return (
         
-      <div class = "d-flex justify-content-center flex-wrap">
+      <div className = "d-flex justify-content-between flex-wrap">
         {/* <main>This is Horned Beasts</main> */}
-        <HornedBeast title = {HornedBeastArray[0].title}  description = {HornedBeastArray[0].description} image = {HornedBeastArray[0].image_url} timesClick= {0} ></HornedBeast>
+ 
+        {HornedBeastArray.map((Beast, index) => (
+            <HornedBeast
+            key={index}
+            title={Beast.title}
+            description={Beast.description}
+            image={Beast.image_url}
+            timesClick={0}
+            updateFunction={props.updateFunction}
+            Beastsupdatefunction={props.beastupdatefunction}
+            displayBeast={Beast}
+
+            />
+            
+        ))}
+
+        
+        
+
+        {/* <HornedBeast title = {HornedBeastArray[0].title}  description = {HornedBeastArray[0].description} image = {HornedBeastArray[0].image_url} timesClick= {0} ></HornedBeast>
         <HornedBeast title = {HornedBeastArray[1].title}  description = {HornedBeastArray[1].description} image = {HornedBeastArray[1].image_url} timesClick= {0}></HornedBeast>
         <HornedBeast title = {HornedBeastArray[2].title}  description = {HornedBeastArray[2].description} image = {HornedBeastArray[2].image_url} timesClick= {0}></HornedBeast>
         <HornedBeast title = {HornedBeastArray[3].title}  description = {HornedBeastArray[3].description} image = {HornedBeastArray[3].image_url} timesClick= {0}></HornedBeast>
@@ -28,7 +48,7 @@ function Main() {
         <HornedBeast title = {HornedBeastArray[16].title}  description = {HornedBeastArray[16].description} image = {HornedBeastArray[16].image_url} timesClick= {0} ></HornedBeast>
         <HornedBeast title = {HornedBeastArray[17].title}  description = {HornedBeastArray[17].description} image = {HornedBeastArray[17].image_url} timesClick= {0} ></HornedBeast>
         <HornedBeast title = {HornedBeastArray[18].title}  description = {HornedBeastArray[18].description} image = {HornedBeastArray[18].image_url} timesClick= {0} ></HornedBeast>
-        <HornedBeast title = {HornedBeastArray[19].title}  description = {HornedBeastArray[19].description} image = {HornedBeastArray[19].image_url} timesClick= {0} ></HornedBeast>
+        <HornedBeast title = {HornedBeastArray[19].title}  description = {HornedBeastArray[19].description} image = {HornedBeastArray[19].image_url} timesClick= {0} ></HornedBeast> */}
       </div>
       
     );
