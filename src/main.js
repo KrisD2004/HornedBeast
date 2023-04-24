@@ -1,11 +1,11 @@
 import './App.css';
 import HornedBeast from './Horned';
 import HornedBeastArray from './data.json';
-
+import { Modal } from 'react-bootstrap';
 
 // fucntion to put the content of the page
 //shortend way to display images
-function Main() {
+function Main(props) {
     return (
         
       <div className = "d-flex justify-content-between flex-wrap">
@@ -17,8 +17,16 @@ function Main() {
             title={Beast.title}
             description={Beast.description}
             image={Beast.image_url}
-            timesClick={0}/>
+            timesClick={0}
+            updateFunction={props.updateFunction}
+            Beastsupdatefunction={props.beastupdatefunction}
+            displayBeast={Beast}
+
+            />
+            
         ))}
+
+        
         
 
         {/* <HornedBeast title = {HornedBeastArray[0].title}  description = {HornedBeastArray[0].description} image = {HornedBeastArray[0].image_url} timesClick= {0} ></HornedBeast>
