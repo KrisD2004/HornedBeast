@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Modal } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import HornedBeast from "./Horned";
+import DropdownMenu from "react-bootstrap/esm/DropdownMenu";
+import { Form } from "react-bootstrap";
 
 // Using a modal for When you click on the image it should pop up. 
 function Selectedbeasts(props) {
@@ -31,6 +33,7 @@ function Selectedbeasts(props) {
                     </Button> */}
                 </Modal.Footer>
             </Modal>
+            
         </>
     )
 }

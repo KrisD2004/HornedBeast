@@ -55,3 +55,15 @@ Start time: _12pm____
 Finish time: __1pm___
 
 Actual time needed to complete: _1pm____
+
+## Lab 4 
+
+Number and name of feature: ________feature : Adding a filter________________________
+
+Estimate of time needed to complete: _5 hours____
+
+Start time: __11:00am___
+
+Finish time: __2:00pm___
+
+Actual time needed to complete: __4 hours___
