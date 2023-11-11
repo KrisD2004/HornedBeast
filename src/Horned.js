@@ -10,6 +10,7 @@ function HornedBeast(props) {
     const [timesClick, timesClicked] = useState(0)
 
     function state(){
+        //function to update the state
         timesClicked(timesClick + 1);
        
     }

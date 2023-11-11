@@ -9,13 +9,16 @@ import { Form } from "react-bootstrap";
 function Selectedbeasts(props) {
     const [show, setShow] = useState(true);
 
-    //everytime i click on an image an model(image,description,and name ) pops up
-    //change this into its own function so i can be able to click on any picture to get a model.
+    // Define the `handleClose` function that sets the `show` state to `false` and calls the `updateFunction` prop to update the parent component's state
+
     function handleClose() {
         setShow(false);
         props.updateFunction(false);
     }
+
+    // Define the `handleShow` function that sets the `show` state to `true`
     const handleShow = () => setShow(true);
+    // render the modal component with seleceted beasts image, title, and the description
     return (
         <>
             <Modal show={show} onHide={handleClose}>
@@ -33,7 +36,7 @@ function Selectedbeasts(props) {
                     </Button> */}
                 </Modal.Footer>
             </Modal>
-            
+
         </>
     )
 }
